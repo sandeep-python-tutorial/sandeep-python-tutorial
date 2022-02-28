@@ -1,6 +1,6 @@
 # Selenium Tutorial
 
-###To Install Selenium
+##To Install Selenium
 > $ pip install selenium
 
 This Python library wraps the Selenium WebDriver and provides methods for automating a range of tasks like filling up the form, logging into a website, clicking on buttons, and more.
