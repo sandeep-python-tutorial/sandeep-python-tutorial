@@ -2,7 +2,7 @@
 - 👀 I have 8+ years of experience in python backend development/ Framework development.
 - 👀 I’m interested in Python Development
 - 🌱 I’m currently learning Python Modules
-- 💞️ I’m looking to collaborate on Creating Python Module Documets with example to help people
+- 💞️ I’m looking to collaborate on Creating Python Module Documents with examples to help people
 - 📫 Please reach me by mail:  sandeepkumarrai@hotmail.com / coolrai.sandeep@gmail.com
 
 <!---
