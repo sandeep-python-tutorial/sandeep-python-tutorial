@@ -7,10 +7,12 @@ To Install Selenium
 
 This Python library wraps the Selenium WebDriver and provides methods for automating a range of tasks like filling up the form, logging into a website, clicking on buttons, and more.
 
-###Import the Selenium library
+Import the Selenium library
+--------------------
   > from selenium import webdriver
 
-###Driver Initialization with Python
+Driver Initialization with Python
+--------------------
 
 By Python to start the Selenium WebDriver and browser driver.
 
@@ -40,7 +42,8 @@ In case the location of the browser driver is not added to the PATH variable (or
 Example:
 >driver=webdriver.Chrome(executable_path="chromedriver.exe",options=chrome_options )
 
-###Setting Options in Selenium WebDriver
+Setting Options in Selenium WebDriver
+--------------------
 
 The Options class in Selenium Python is commonly used in conjunction with Desired Capabilities to customize Selenium WebDriver.
 It helps to perform various operations like opening the browser in maximized mode, enabling and disabling browser extensions, disabling GPU mode, disabling pop-ups, and more. 
@@ -61,7 +64,8 @@ It helps to perform various operations like opening the browser in maximized mod
 > 
 >driver = webdriver.Chrome(chrome_options=chrome_options)
 
-###Finding an element
+Finding an element
+--------------------
 
 Locators in Selenium are majorly used for locating WebElements present in the DOM. Appropriate interactions (or actions) are further performed on the located WebElements. Some popular Selenium web locators are ID, Name, Link Text, Partial Link Text, CSS Selectors, XPath, TagName, etc.
 - Locate Elements by the ID attribute
@@ -131,7 +135,8 @@ It selects elements based on the link text (either complete link text or partial
 > 
 >email_input1 = driver.find_element_by_partial_link_text('Start Free')
 
-###Misc methods for finding elements
+Misc methods for finding elements
+--------------------
 Two private methods might be useful for locating page elements in conjunction with the “By” class for selecting attributes.
 It is to be noted that there is no difference between find_element_by_tag method and find_element(By.tag) method. By default, find_element_by_tag calls the find_element(By.tag) method.
 - find_element – It returns the first instance from multiple web elements with a particular attribute in the DOM. The method throws NoSuchElementException if no web elements are matching the required web locator. 
@@ -162,16 +167,20 @@ Example:
 > 
 > driver.find_elements(By.XPATH, '//input')
 
-###Opening a URL (or document)
+Opening a URL (or document)
+--------------------
 > driver.get(URL)
 > 
 The driver.get() method navigates to the page that is passed as a parameter to the method. Selenium WebDriver will wait until the page has fully loaded, post which it fires an “onload” event before returning control to the test script. 
 > driver.get("https://www.lambdatest.com")
 
-###Refresh a page
+Refresh a page
+--------------------
 There are scenarios where you would want to refresh the contents on the page. 
 > driver.refresh()
-###Writing text inside a WebElement
+
+Writing text inside a WebElement
+--------------------
 The send_keys() method in Python is used for entering text inside a text element. 
 >`# get element `
 > 
@@ -189,7 +198,9 @@ The element.clear() method in Selenium Python is used to clear text from fields 
 >`# send keys `
 > 
 >element.clear()
-###Clicking a WebElement
+
+Clicking a WebElement
+--------------------
 The element.click() method in Selenium Python is used to click on an element like anchor tag, button tag, etc.
 >`# get element` 
 > 
@@ -197,7 +208,9 @@ The element.click() method in Selenium Python is used to click on an element lik
 >`# click the element`
 >
 >button_element.click()
-###Dragging and Dropping a WebElement
+
+Dragging and Dropping a WebElement
+--------------------
 The drag_and_drop(element, target) method in Selenium Python helps in automating the functionality of dragging WebElements from the source and dropping them on target area (or element).
 >element = driver.find_element_by_name("source")
 > 
@@ -208,7 +221,10 @@ The drag_and_drop(element, target) method in Selenium Python helps in automating
 >action_chains = ActionChains(driver)
 > 
 >action_chains.drag_and_drop(element, target).perform()
-###Selecting an option
+
+Selecting an option
+--------------------
+
 Select(element) provides useful methods for interacting with drop-downs, selecting elements, and more.
 >from selenium.webdriver.support.ui import Select
 > 
@@ -222,7 +238,8 @@ Select(element) provides useful methods for interacting with drop-downs, selecti
 > 
 >select.deselect_all()
 
-###Navigating between windows
+Navigating between windows
+--------------------
 If there are multiple windows, you might need to switch to the right window before performing actions on the WebElements present in the DOM.
 >driver.switch_to_window(“window_name”)
 
@@ -242,7 +259,10 @@ Window_handles property of the WebDriver returns handles of the windows. You can
 
 The current_window_handle() method returns the handle of the current window (or window currently under focus) 
 >handler = driver.current_window_handle 
-###Switching to iFrames
+
+Switching to iFrames
+--------------------
+
 Selenium WebDriver can not access or locate the web elements inside an iFrame in the context of the main web page. Hence, you need to switch to an iFrame before accessing the WebElements inside the iframe.
 >driver.switch_to_frame(“frame_name”)
 
@@ -253,7 +273,10 @@ The switch_to_frame() method in Selenium Python lets you switch the context of W
 
 This method allows you to switch back to the context of the main page. 
 >driver.switch_to_default_content()
-###Handling pop-ups and alerts
+
+Handling pop-ups and alerts
+--------------------
+
 There are three main types of popups & alerts that are commonly used in web applications:
 - Simple Alert
 - Confirmation Alert
@@ -289,7 +312,9 @@ This method is used to retrieve the message included in the Alert popup.
 >msg = alert_obj.text()
 > 
 >print(msg)
-###Getting Page Source
+
+Getting Page Source
+--------------------
 The page_source() method in Selenium WebDriver is used to get the target document’s page source (or test page). 
 >page_source = driver.page_source
 ###Navigating browser history
@@ -302,7 +327,9 @@ This method allows scripts to navigate one step forward in history.
 
 This method allows scripts to navigate one step backward in history. 
 >driver.back()
-###Handling Cookies in Selenium
+
+Handling Cookies in Selenium
+--------------------
 Handling cookies in Selenium WebDriver is one of the common scenarios that you might have to deal with in Selenium web automation. You can perform various operations like add, remove, get cookie name, and more.
 >driver.add_cookie()
 
@@ -338,12 +365,16 @@ There is an option to delete a specific cookie or all the cookies associated wit
 >`# delete all cookies`
 > 
 >driver.delete_all_cookies()
-###Setting Window Size
+
+Setting Window Size
+--------------------
 The set_window_size() method is used to set the browser window’s size to desired dimensions (in height and width). 
 >`# Setting the window size to 1200 * 800`
 > 
 >driver.set_window_size(1200, 800)
-###Configuring TimeOuts in Selenium WebDriver
+
+Configuring TimeOuts in Selenium WebDriver
+--------------------
 When the browser loads a page, the WebElements inside the page may load at various time intervals. This might create complications when interacting with the dynamic elements present on the page.
 If an element is not present in the DOM of the web page, the locate method will raise an exception. Waits in Selenium lets you add delays (in ms or seconds) between the actions performed between loading the page and locating the required WebElement.
 
@@ -410,7 +441,9 @@ Shown below is an example that demonstrates the usage of explicit wait where a n
 >except:
 >
 >         print(“some error happen !!”)
-###Capturing Screenshots
+
+Capturing Screenshots
+--------------------
 During the process of Selenium web automation, you might want to capture the screenshot of the entire page or screenshot of a particular WebElement.
 >capture_path = 'C:/capture/your_desired_filename.png'
 > 
