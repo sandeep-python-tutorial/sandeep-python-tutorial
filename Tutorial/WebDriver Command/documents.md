@@ -1,6 +1,7 @@
 # Selenium Tutorial
 
-##To Install Selenium
+To Install Selenium
+--------------------
 
 > $ pip install selenium
 
