@@ -94,5 +94,10 @@ We can provide some specific implementation of the parent class method in our ch
 The problem with method overloading in Python is that we may overload the methods but can only use the latest defined method.
 
 
+### Python Operator Overloading
+when you use p1 + p2, Python calls p1.__add__(p2) which in turn is Point.__add__(p1,p2). After this, the addition operation is carried out the way we specified.
+
+Similarly, we can overload other operators as well. The special function that we need to implement is tabulated below.
+
 
 
