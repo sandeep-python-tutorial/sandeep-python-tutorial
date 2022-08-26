@@ -1,7 +1,7 @@
 ## Object-Oriented Programming (OOPs) 
 1. **Class** - A class is a collection of objects. A class contains the blueprints or the prototype from which the objects are being created. It is a logical entity that contains some attributes and methods. 
 2. **Objects** - The object is an entity that has a state and behavior associated with it.
-3. **Polymorphism** - 
+3. **Polymorphism** - Polymorphism lets us define methods in the child class that have the same name as the methods in the parent class. In inheritance, the child class inherits the methods from the parent class. However, it is possible to modify a method in a child class that it has inherited from the parent class. This is particularly useful in cases where the method inherited from the parent class doesn’t quite fit the child class. In such cases, we re-implement the method in the child class. This process of re-implementing a method in the child class is known as Method Overriding. 
 4. **Encapsulation** - It describes the idea of wrapping data and the methods that work on data within one unit. This puts restrictions on accessing variables and methods directly and can prevent the accidental modification of data. To prevent accidental change, an object’s variable can only be changed by an object’s method. Those types of variables are known as private variables.
 A class is an example of encapsulation as it encapsulates all the data that is member functions, variables, etc.
 5. **Inheritance** - Inheritance is the capability of one class to derive or inherit the properties from another class.
