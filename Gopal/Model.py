@@ -37,3 +37,16 @@ class Model(object):
             return False
         except Exception as ex:
             raise Exception("Failed to add value %s in table %s/n %s" % (value, self.table_name, ex))
+
+    def get_table_data(self):
+        try:
+            print("Fetching the table %s data" % self.table_name)
+            datalist = self.conn.execute("SELECT %s from %s" % (self.table_value, self.table_name))
+            for data in datalist:
+                print (data)
+
+        except Exception as ex:
+            raise Exception("Failed to fetch the table %s value /n %s" % (self.table_name, ex))
+
+    def close_connection(self):
+        self.conn.close()

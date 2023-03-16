@@ -23,3 +23,4 @@ class RandomStringGenerator32bit(Model):
 test = RandomStringGenerator32bit("test.db","Test1", "Name")
 token = test.unique_secret_token_generator()
 print (token)
+test.close_connection()
