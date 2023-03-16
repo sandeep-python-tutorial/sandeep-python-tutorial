@@ -31,11 +31,9 @@ class Model(object):
             self.conn.execute("INSERT INTO %s (%s) VALUES ('%s')" % (self.table_name, self.table_value, value))
             self.conn.commit()
             print ("Records created successfully")
+            return True
         except IntegrityError:
             print("%s value present in table %s" % (value, self.table_name))
+            return False
         except Exception as ex:
             raise Exception("Failed to add value %s in table %s/n %s" % (value, self.table_name, ex))
-
-model =Model("test.db","Test1", "Name")
-model.create_table()
-model.insert_data_in_table("456HK")
