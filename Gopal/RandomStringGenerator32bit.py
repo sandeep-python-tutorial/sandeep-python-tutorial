@@ -12,10 +12,8 @@ class RandomStringGenerator32bit(Model):
 
         while True:
             token = ''.join(secrets.choice(alphabet) for i in range(10))
-            if (any(c.islower() for c in token)
-                    and any(c.isupper() for c in token)
-                    and sum(c.isdigit() for c in token) >= 3
-                    and self.insert_data_in_table(token)):
+            if (self.insert_data_in_table(token)):
+                print("TOKEN= %s" % token)
                 break
         return token
 
@@ -23,4 +21,5 @@ class RandomStringGenerator32bit(Model):
 test = RandomStringGenerator32bit("test.db","Test1", "Name")
 token = test.unique_secret_token_generator()
 print (token)
+test.get_table_data()
 test.close_connection()

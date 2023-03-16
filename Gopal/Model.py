@@ -43,7 +43,8 @@ class Model(object):
             print("Fetching the table %s data" % self.table_name)
             datalist = self.conn.execute("SELECT %s from %s" % (self.table_value, self.table_name))
             for data in datalist:
-                print (data)
+                for value in data:
+                    print (value)
 
         except Exception as ex:
             raise Exception("Failed to fetch the table %s value /n %s" % (self.table_name, ex))
